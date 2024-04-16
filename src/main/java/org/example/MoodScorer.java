@@ -12,7 +12,7 @@ public class MoodScorer {
         return score;
     }
     private static int countWords(String content, List<String> words, boolean isPositive) {
-        String patternString = "\\b(" + String.join("|", words) + ")\\b";
+        String patternString = "(" + String.join("|", words) + ")";
         Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(content);
         int count = 0;
